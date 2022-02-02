@@ -25,6 +25,7 @@ def parse(inp):
         pizzas.append(pizza)
     ns.pizzas = pizzas
 
+
     return ns
 
 class FlexibleEncoder(json.JSONEncoder):

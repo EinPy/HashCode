@@ -104,7 +104,7 @@ def _get_best(name):
 def _create_best_run(testcase, score, run_folder):
     best_runs = p.Path('best_runs')
     best_runs.mkdir(parents=True, exist_ok=True)
-    shutil.copytree(p.Path(run_folder), best_runs / '{}_{}'.format(testcase, score))
+    #shutil.copytree(p.Path(run_folder), best_runs / '{}_{}'.format(testcase, score))
 
 
 def _update_best(testcase, score, run_folder, module_name):
