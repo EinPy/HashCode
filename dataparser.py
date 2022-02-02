@@ -14,7 +14,16 @@ def nl(itr):
 def parse(inp):
     itr = (line for line in inp.split('\n'))
     ns = argparse.Namespace()
-    # TODO: fill ns
+    ns.M, ns.T2, ns.T3, ns.T4 = nl(itr)
+    pizzas = []
+    for i in range(ns.M):
+        arr = next(itr).split()
+        pizza = {
+            "id" : i,
+            "ing" : arr[1:]
+        }
+        pizzas.append(pizza)
+    ns.pizzas = pizzas
 
     return ns
 
